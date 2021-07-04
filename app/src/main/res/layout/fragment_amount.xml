@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.jaidev.amountkeyboard.ui.amount.NumberPad" />
+
+        <variable
+            name="handler"
+            type="com.jaidev.amountkeyboard.ui.amount.AmountFragment" />
+
+        <variable
+            name="vm"
+            type="com.jaidev.amountkeyboard.ui.amount.AmountViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="@dimen/marginQuad">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <TextView
+                style="@style/NumPadStyle"
+                android:id="@+id/txt_num1"
+                android:layout_width="@dimen/buttonSize"
+                android:layout_height="@dimen/buttonSize"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:onClick="@{() -> vm.onNumberClicked(NumberPad.ONE)}"
+                android:text="@string/one"
+                app:layout_constraintEnd_toStartOf="@+id/txt_num2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/NumPadStyle"
+                android:id="@+id/txt_num2"
+                android:layout_width="@dimen/buttonSize"
+                android:layout_height="@dimen/buttonSize"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:onClick="@{() -> vm.onNumberClicked(NumberPad.TWO)}"
+                android:text="@string/two"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_num1"
+                app:layout_constraintEnd_toStartOf="@+id/txt_num3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/txt_num1"
+                app:layout_constraintTop_toTopOf="@+id/txt_num1" />
+
+            <TextView
+                style="@style/NumPadStyle"
+                android:id="@+id/txt_num3"
+                android:layout_width="@dimen/buttonSize"
+                android:layout_height="@dimen/buttonSize"
+                android:background="@drawable/circular_view"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:onClick="@{() -> vm.onNumberClicked(NumberPad.THREE)}"
+                android:text="@string/three"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_num2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/txt_num2"
+                app:layout_constraintTop_toTopOf="@+id/txt_num2" />
+
+            <TextView
+                style="@style/NumPadStyle"
+                android:id="@+id/txt_num4"
+                android:layout_width="@dimen/buttonSize"
+                android:layout_height="@dimen/buttonSize"
+                android:layout_marginTop="@dimen/margin"
+                android:background="@drawable/circular_view"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:onClick="@{() -> vm.onNumberClicked(NumberPad.FOUR)}"
+                android:text="@string/four"
+                app:layout_constraintEnd_toStartOf="@+id/txt_num5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_num1" />
+
+            <TextView
+                style="@style/NumPadStyle"
+                android:id="@+id/txt_num5"
+                android:layout_width="@dimen/buttonSize"
+                android:layout_height="@dimen/buttonSize"
+                android:background="@drawable/circular_view"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:onClick="@{() -> vm.onNumberClicked(NumberPad.FIVE)}"
+                android:text="@string/five"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_num4"
+                app:layout_constraintEnd_toStartOf="@+id/txt_num6"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/txt_num4"
+                app:layout_constraintTop_toTopOf="@+id/txt_num4" />
+
+            <TextView
+                style="@style/NumPadStyle"
+                android:id="@+id/txt_num6"
+                android:layout_width="@dimen/buttonSize"
+                android:layout_height="@dimen/buttonSize"
+                android:background="@drawable/circular_view"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:onClick="@{() -> vm.onNumberClicked(NumberPad.SIX)}"
+                android:text="@string/six"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_num5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/txt_num5"
+                app:layout_constraintTop_toTopOf="@+id/txt_num5" />
+
+
+            <TextView
+                style="@style/NumPadStyle"
+                android:id="@+id/txt_num7"
+                android:layout_width="@dimen/buttonSize"
+                android:layout_height="@dimen/buttonSize"
+                android:layout_marginTop="@dimen/margin"
+                android:background="@drawable/circular_view"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:onClick="@{() -> vm.onNumberClicked(NumberPad.SEVEN)}"
+                android:text="@string/seven"
+                app:layout_constraintEnd_toStartOf="@+id/txt_num8"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_num4" />
+
+            <TextView
+                style="@style/NumPadStyle"
+                android:id="@+id/txt_num8"
+                android:layout_width="@dimen/buttonSize"
+                android:layout_height="@dimen/buttonSize"
+                android:background="@drawable/circular_view"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:onClick="@{() -> vm.onNumberClicked(NumberPad.EIGHT)}"
+                android:text="@string/eight"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_num7"
+                app:layout_constraintEnd_toStartOf="@+id/txt_num9"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/txt_num7"
+                app:layout_constraintTop_toTopOf="@+id/txt_num7" />
+
+            <TextView
+                style="@style/NumPadStyle"
+                android:id="@+id/txt_num9"
+                android:layout_width="@dimen/buttonSize"
+                android:layout_height="@dimen/buttonSize"
+                android:background="@drawable/circular_view"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:onClick="@{() -> vm.onNumberClicked(NumberPad.NINE)}"
+                android:text="@string/nine"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_num8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/txt_num8"
+                app:layout_constraintTop_toTopOf="@+id/txt_num8" />
+
+
+            <TextView
+                style="@style/NumPadStyle"
+                android:id="@+id/txt_num_dot"
+                android:layout_width="@dimen/buttonSize"
+                android:layout_height="@dimen/buttonSize"
+                android:layout_marginTop="@dimen/margin"
+                android:background="@drawable/circular_view"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:onClick="@{() -> vm.onDotClicked()}"
+                android:text="@string/dot"
+                app:layout_constraintEnd_toStartOf="@+id/txt_num0"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_num7" />
+
+            <TextView
+                style="@style/NumPadStyle"
+                android:id="@+id/txt_num0"
+                android:layout_width="@dimen/buttonSize"
+                android:layout_height="@dimen/buttonSize"
+                android:background="@drawable/circular_view"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:onClick="@{() -> vm.onNumberClicked(NumberPad.ZERO)}"
+                android:text="@string/zero"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_num_dot"
+                app:layout_constraintEnd_toStartOf="@+id/iv_backspace"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/txt_num_dot"
+                app:layout_constraintTop_toTopOf="@+id/txt_num_dot" />
+
+            <ImageView
+                style="@style/NumPadStyle"
+                android:id="@+id/iv_backspace"
+                android:layout_width="@dimen/buttonSize"
+                android:layout_height="@dimen/buttonSize"
+                android:background="@drawable/circular_view"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:onClick="@{() -> vm.onBackSpaceClicked()}"
+                android:scaleType="center"
+                app:tint="@color/purple_500"
+                android:src="@drawable/ic_baseline_backspace_24"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_num0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/txt_num0"
+                app:layout_constraintTop_toTopOf="@+id/txt_num0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txt_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:gravity="start"
+            android:paddingTop="@dimen/margin"
+            android:paddingEnd="@dimen/margin"
+            android:paddingBottom="@dimen/margin"
+            android:text="@string/aed_0_00"
+            android:textColor="@color/grey"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/edt_amount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/edt_amount"
+            app:layout_constraintTop_toTopOf="@+id/edt_amount" />
+
+        <EditText
+            android:id="@+id/edt_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginQuad"
+            android:enabled="false"
+            android:gravity="start"
+            android:inputType="number"
+            android:paddingStart="@dimen/margin"
+            android:paddingTop="@dimen/margin"
+            android:paddingBottom="@dimen/margin"
+            android:text="@{vm.amount}"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toStartOf="@+id/txt_amount"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
