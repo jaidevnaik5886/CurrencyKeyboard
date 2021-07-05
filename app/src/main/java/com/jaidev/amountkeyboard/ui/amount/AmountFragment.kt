@@ -18,7 +18,7 @@ class AmountFragment : BaseFragment<FragmentAmountBinding>(R.layout.fragment_amo
         binding.handler = this
         binding.vm = model
         model.amount.observe(viewLifecycleOwner, {
-            val amount = Utils.getCurrency(it)
+            val amount = Utils.getCurrencyWithPrefix(it, getString(R.string.aed_label))
             binding.edtAmount.setText(amount.first)
             binding.txtAmount.text = amount.second
         })

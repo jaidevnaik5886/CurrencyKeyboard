@@ -23,7 +23,6 @@ abstract class BaseActivity<out T : ViewDataBinding>(@LayoutRes val layoutId: In
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        initVMDependency()
         attachBinding()
     }
 
@@ -44,25 +43,6 @@ abstract class BaseActivity<out T : ViewDataBinding>(@LayoutRes val layoutId: In
     }
 
     open fun attachBinding() {}
-
-    private fun initVMDependency() {
-        getVM()?.bus?.observe(this, { event ->
-            when (event) {
-                is ToastEvent -> {
-                    Toast.makeText(this, event.message, Toast.LENGTH_SHORT).show()
-                }
-                is ErrorEvent -> {
-                    Toast.makeText(this, event.message, Toast.LENGTH_SHORT).show()
-                }
-                is SuccessEvent -> {
-                    Toast.makeText(this, event.message, Toast.LENGTH_SHORT).show()
-                }
-                else -> {
-                    handleEvent(event)
-                }
-            }
-        })
-    }
 
     open fun handleEvent(event: BaseEvent) {
 

@@ -51,6 +51,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
 
     def nav_version = "2.3.5"
     api("androidx.navigation:navigation-fragment-ktx:$nav_version")
@@ -64,9 +65,5 @@ dependencies {
 
     api("com.google.dagger:hilt-android:$hilt_version")
     kapt("com.google.dagger:hilt-compiler:$hilt_version")
-
-    def glide_ver = "4.11.0"
-    api("com.github.bumptech.glide:glide:$glide_ver")
-    api("com.github.bumptech.glide:compiler:$glide_ver")
 
 }

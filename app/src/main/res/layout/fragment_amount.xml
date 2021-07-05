@@ -35,8 +35,8 @@
 
 
             <TextView
-                style="@style/NumPadStyle"
                 android:id="@+id/txt_num1"
+                style="@style/NumPadStyle"
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
                 android:clickable="true"
@@ -50,8 +50,8 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                style="@style/NumPadStyle"
                 android:id="@+id/txt_num2"
+                style="@style/NumPadStyle"
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
                 android:clickable="true"
@@ -66,8 +66,8 @@
                 app:layout_constraintTop_toTopOf="@+id/txt_num1" />
 
             <TextView
-                style="@style/NumPadStyle"
                 android:id="@+id/txt_num3"
+                style="@style/NumPadStyle"
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
                 android:background="@drawable/circular_view"
@@ -83,8 +83,8 @@
                 app:layout_constraintTop_toTopOf="@+id/txt_num2" />
 
             <TextView
-                style="@style/NumPadStyle"
                 android:id="@+id/txt_num4"
+                style="@style/NumPadStyle"
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
                 android:layout_marginTop="@dimen/margin"
@@ -100,8 +100,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/txt_num1" />
 
             <TextView
-                style="@style/NumPadStyle"
                 android:id="@+id/txt_num5"
+                style="@style/NumPadStyle"
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
                 android:background="@drawable/circular_view"
@@ -117,8 +117,8 @@
                 app:layout_constraintTop_toTopOf="@+id/txt_num4" />
 
             <TextView
-                style="@style/NumPadStyle"
                 android:id="@+id/txt_num6"
+                style="@style/NumPadStyle"
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
                 android:background="@drawable/circular_view"
@@ -135,8 +135,8 @@
 
 
             <TextView
-                style="@style/NumPadStyle"
                 android:id="@+id/txt_num7"
+                style="@style/NumPadStyle"
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
                 android:layout_marginTop="@dimen/margin"
@@ -152,8 +152,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/txt_num4" />
 
             <TextView
-                style="@style/NumPadStyle"
                 android:id="@+id/txt_num8"
+                style="@style/NumPadStyle"
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
                 android:background="@drawable/circular_view"
@@ -169,8 +169,8 @@
                 app:layout_constraintTop_toTopOf="@+id/txt_num7" />
 
             <TextView
-                style="@style/NumPadStyle"
                 android:id="@+id/txt_num9"
+                style="@style/NumPadStyle"
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
                 android:background="@drawable/circular_view"
@@ -187,8 +187,8 @@
 
 
             <TextView
-                style="@style/NumPadStyle"
                 android:id="@+id/txt_num_dot"
+                style="@style/NumPadStyle"
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
                 android:layout_marginTop="@dimen/margin"
@@ -204,8 +204,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/txt_num7" />
 
             <TextView
-                style="@style/NumPadStyle"
                 android:id="@+id/txt_num0"
+                style="@style/NumPadStyle"
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
                 android:background="@drawable/circular_view"
@@ -221,8 +221,8 @@
                 app:layout_constraintTop_toTopOf="@+id/txt_num_dot" />
 
             <ImageView
-                style="@style/NumPadStyle"
                 android:id="@+id/iv_backspace"
+                style="@style/NumPadStyle"
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
                 android:background="@drawable/circular_view"
@@ -231,13 +231,13 @@
                 android:gravity="center"
                 android:onClick="@{() -> vm.onBackSpaceClicked()}"
                 android:scaleType="center"
-                app:tint="@color/purple_500"
                 android:src="@drawable/ic_baseline_backspace_24"
                 app:layout_constraintBottom_toBottomOf="@+id/txt_num0"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/txt_num0"
-                app:layout_constraintTop_toTopOf="@+id/txt_num0" />
+                app:layout_constraintTop_toTopOf="@+id/txt_num0"
+                app:tint="@color/purple_500" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -248,11 +248,10 @@
             android:enabled="false"
             android:gravity="start"
             android:paddingTop="@dimen/margin"
-            android:paddingEnd="@dimen/margin"
             android:paddingBottom="@dimen/margin"
             android:text="@string/aed_0_00"
             android:textColor="@color/grey"
-            android:textSize="32sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="@+id/edt_amount"
@@ -269,12 +268,11 @@
             android:enabled="false"
             android:gravity="start"
             android:inputType="number"
-            android:paddingStart="@dimen/margin"
             android:paddingTop="@dimen/margin"
             android:paddingBottom="@dimen/margin"
             android:text="@{vm.amount}"
             android:textColor="@color/black"
-            android:textSize="32sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
             app:layout_constraintEnd_toStartOf="@+id/txt_amount"

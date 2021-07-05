@@ -35,27 +35,7 @@ abstract class BaseFragment<out T : ViewDataBinding>(
         toolbarTitle?.apply { setToolbarTitle(this) }
         setHasOptionsMenu(true)
         attachBinding()
-        initVMDependency()
         return binding.root
-    }
-
-    open fun initVMDependency() {
-        getVM().bus.observe(viewLifecycleOwner, { event ->
-            when (event) {
-                is ToastEvent -> {
-                    Toast.makeText(context, event.message, Toast.LENGTH_SHORT).show()
-                }
-                is ErrorEvent -> {
-                    Toast.makeText(context, event.message, Toast.LENGTH_SHORT).show()
-                }
-                is SuccessEvent -> {
-                    Toast.makeText(context, event.message, Toast.LENGTH_SHORT).show()
-                }
-                else -> {
-                    handleEvent(event)
-                }
-            }
-        })
     }
 
     open fun attachBinding() {

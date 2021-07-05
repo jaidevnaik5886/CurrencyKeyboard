@@ -12,10 +12,6 @@ class AmountViewModel @Inject constructor(
 
     val amount: MutableLiveData<String> = MutableLiveData<String>("")
 
-
-    init {
-    }
-
     fun onNumberClicked(numberPad: NumberPad) {
         var totalLength = 10
         val maxDecimalLength = 2
